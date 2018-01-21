@@ -112,7 +112,7 @@ $ git clone git@github.com:WellWish/wellwish
 
 ## Configuration
 
-Requires Ruby 2.4.2 and postgresql
+Requires Ruby 2.5 and postgresql 10
 
 
 ### Install dependencies
