@@ -14,6 +14,10 @@ class MailingListContactsController < ApplicationController
     @mailing_list_contact = MailingListContact.new(mailing_list_contact_params)
 
     if @mailing_list_contact.save
+      MailingListContactMailer
+        .confirmation_email(@mailing_list_contact)
+        .deliver_later
+
       redirect_to(@mailing_list_contact,
                   notice: "Mailing list contact was successfully created.")
     else
