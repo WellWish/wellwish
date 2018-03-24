@@ -112,20 +112,25 @@ $ git clone git@github.com:WellWish/wellwish
 
 ## Configuration
 
-Requires Ruby 2.4.2 and postgresql
-
 
 ### Install dependencies
+
+* Install Ruby 2.5.0 with [rbenv](https://github.com/rbenv/rbenv)
+* Install [postgresql 10](https://www.postgresql.org/download/)
+* Install [heroku cli](https://devcenter.heroku.com/articles/heroku-cli)
+
+Then:
 
 ```
 $ bundle install
 ```
 
 
-### Create database
+### Create and migrate database
 
 ```
 $ bundle exec rails db:create
+$ bundle exec rails db:migrate
 ```
 
 
@@ -160,7 +165,7 @@ Fork the repo, make the change, submit a PR.
 ### Linting
 
 ```
-$ rubocop --rails
+$ rubocop
 ```
 
 
