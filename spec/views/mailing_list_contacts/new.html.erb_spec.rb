@@ -5,7 +5,7 @@ require "rails_helper"
 describe "mailing_list_contacts/new" do
   before(:each) do
     contact = MailingListContact.new(name: "Sheldon J. Johnson",
-                                      email: "sheldon@wellwish.org")
+                                     email: "sheldon@wellwish.org")
 
     assign :mailing_list_contact, contact
   end
