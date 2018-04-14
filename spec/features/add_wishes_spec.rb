@@ -7,7 +7,9 @@ RSpec.feature "AddWishes", type: :feature do
     user = create(:user)
 
     sign_in user
-    click_on "Create Wish"
+    visit user_root_path
+
+    click_on "New Wish"
     fill_in "Title", with: "Fix the broken basketball hoop"
     fill_in "Description", with: "Somebody dunked the ring and now it's bent " \
       "down. Would be good if someone could bend it back into shape."
