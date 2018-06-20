@@ -1,4 +1,10 @@
 <%= form_with(model: wish, local: true) do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title, id: :wish_title %></br>
+
+  <%= form.label :description %>
+  <%= form.text_area :description, id: :wish_description %>
+
   <% if wish.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(wish.errors.count, "error") %> prohibited this wish from being saved:</h2>
